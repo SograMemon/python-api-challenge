@@ -2,7 +2,7 @@
 
 ## Background
 
-Whether financial, political, or social -- data's true power lies in its ability to answer questions definitively. So let's take what you've learned about Python requests, APIs, and JSON traversals to answer a fundamental question: "What's the weather like as we approach the equator?"
+Whether financial, political, or social -- data's true power lies in its ability to answer questions definitively. So let's take what I have learned about Python requests, APIs, and JSON traversals to answer a fundamental question: "What's the weather like as we approach the equator?"
 
 Now, we know what you may be thinking: _"Duh. It gets hotter..."_
 
@@ -10,52 +10,60 @@ But, if pressed, how would you **prove** it?
 
 ![Equator](Images/equatorsign.png)
 
-### Before You Begin
+## Data Analysis
 
-1. Create a new repository for this project called `python-api-challenge`. **Do not add this homework to an existing repository**.
+In this part, I will be creating a Python script to visualize the weather of 500+ cities across the world of varying distance from the equator. To accomplish this, I will be utilizing a [simple Python library](https://pypi.python.org/pypi/citipy) and the [OpenWeatherMap API](https://openweathermap.org/api).
 
-2. Clone the new repository to your computer.
-
-3. Inside your local git repository, create a directory for both of the  Python Challenges. Use folder names corresponding to the challenges: **WeatherPy**.
-
-4. Inside the folder that you just created, add new files called `WeatherPy.ipynb` and `VacationPy.ipynb`. These will be the main scripts to run for each analysis.
-
-5. Push the above changes to GitHub.
-
-## Part I - WeatherPy
-
-In this example, you'll be creating a Python script to visualize the weather of 500+ cities across the world of varying distance from the equator. To accomplish this, you'll be utilizing a [simple Python library](https://pypi.python.org/pypi/citipy), the [OpenWeatherMap API](https://openweathermap.org/api), and a little common sense to create a representative model of weather across world cities.
-
-Your first requirement is to create a series of scatter plots to showcase the following relationships:
+I will first create a series of scatter plots to showcase the following relationships:
 
 * Temperature (F) vs. Latitude
-* Humidity (%) vs. Latitude
-* Cloudiness (%) vs. Latitude
-* Wind Speed (mph) vs. Latitude
 
-After each plot add a sentence or too explaining what the code is and analyzing.
-
-Your second requirement is to run linear regression on each relationship, only this time separating them into Northern Hemisphere (greater than or equal to 0 degrees latitude) and Southern Hemisphere (less than 0 degrees latitude):
+![lat_MaxTemp_Global](output_data/lat_MaxTemp_Global.png)
 
 * Northern Hemisphere - Temperature (F) vs. Latitude
+
+![lat_MaxTemp_Northern](output_data/lat_MaxTemp_Northern.png)
+
 * Southern Hemisphere - Temperature (F) vs. Latitude
+
+![lat_MaxTemp_Southern](output_data/lat_MaxTemp_Southern.png)
+
+* Humidity (%) vs. Latitude
+
+![lat_Humidity_Global](output_data/lat_Humidity_Global.png)
+
 * Northern Hemisphere - Humidity (%) vs. Latitude
+
+![lat_Humidity_Northern](output_data/lat_Humidity_Northern.png)
+
 * Southern Hemisphere - Humidity (%) vs. Latitude
+
+![lat_Humidity_Southern](output_data/lat_Humidity_Southern.png)
+
+* Cloudiness (%) vs. Latitude
+
+![lat_Cloudiness_Global](output_data/lat_Cloudiness_Global.png)
+
 * Northern Hemisphere - Cloudiness (%) vs. Latitude
+
+![lat_Cloudiness_Northern](output_data/lat_Cloudiness_Northern.png)
+
 * Southern Hemisphere - Cloudiness (%) vs. Latitude
+
+![lat_Cloudiness_Southern](output_data/lat_Cloudiness_Southern.png)
+
+* Wind Speed (mph) vs. Latitude
+
+![lat_WindSpeed_Global](output_data/lat_WindSpeed_Global.png)
+
 * Northern Hemisphere - Wind Speed (mph) vs. Latitude
+
+![lat_WindSpeed_Northern](output_data/lat_WindSpeed_Northern.png)
+
 * Southern Hemisphere - Wind Speed (mph) vs. Latitude
 
-After each pair of plots explain what the linear regression is modeling such as any relationships you notice and any other analysis you may have.
+![lat_WindSpeed_Southern](output_data/lat_WindSpeed_Southern.png)
 
-**Optional** You will be creating multiple linear regression plots. To optimize your code, write a function that creates the linear regression plots.
-
-Your final notebook must:
-
-* Randomly select **at least** 500 unique (non-repeat) cities based on latitude and longitude.
-* Perform a weather check on each of the cities using a series of successive API calls.
-* Include a print log of each city as it's being processed with the city number and city name.
-* Save a CSV of all retrieved data and a PNG image for each scatter plot.
 
 ### Part II - VacationPy
 
